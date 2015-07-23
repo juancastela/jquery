@@ -1,41 +1,51 @@
-¿QUE ES?
+Â¿QUE ES?
 ----------
 
-Esto es un plugin de jQuery que permite añadir a tu página web o blog botones sociales para compartir tu contenido.
-En esta primera versión podrás añadir los siguientes botones sociales: google plus, facebook, twitter y linkendin. En futuras versiones podrás añadir otros.
+Esto es un plugin de jQuery que permite aÃ±adir a tu pÃ¡gina web o blog botones sociales para compartir tu contenido.
+En esta primera versiÃ³n podrÃ¡s aÃ±adir los siguientes botones sociales: google plus, facebook, twitter y linkendin.
+En futuras versiones podrÃ¡s aÃ±adir otros.
 
-¿COMO LO INVOCO?
+Â¿COMO LO INVOCO?
 ----------------
 
-Para empezar debes de añadir en tu sition web las siguientes referencias:
+Para empezar debes de aÃ±adir en tu sition web las siguientes referencias:
 
 1) jQuery: Es obligatoria para que funcione el plugin.
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
 
-2) font-awesome: No es obligatoria puesto que el plugin la añadirá automáticamente en tu código html.
+2) font-awesome: No es obligatoria puesto que el plugin la aÃ±adirÃ¡ automÃ¡ticamente en tu cÃ³digo html.
 
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-Una vez hecho esto, para invocar al plugin, debes añadir el siguiente código entre las etiquetas <script></script> o en un fichero externo js en tu página web o blog justo
-después de <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script> para que el plugin funcione:
+Una vez hecho esto, para invocar al plugin, debes aÃ±adir el siguiente cÃ³digo entre las etiquetas <script></script> o en un
+fichero externo js en tu pÃ¡gina web o blog justo despuÃ©s de
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+para que el plugin funcione:
 
 $(document).ready(function(){
-   <!-- línea 1 -->
-   $(element id).socialbuttons({'aligment':'left','buttons':["g-plus","facebook","twitter","linkedin"],'effect':'rotate','fixed':'none','look':'square','position':'row',});
-   <!-- línea 2 -->
+   <!-- lÃ­nea 1 -->
+   $(element id).socialbuttons({
+   'aligment':'left',
+   'buttons':["g-plus","facebook","twitter","linkedin"],
+   'effect':'rotate',
+   'fixed':'none',
+   'look':'square',
+   'position':'row',
+   });
+   <!-- lÃ­nea 2 -->
    $(element id).data('socialbuttons').start();
 });
 
-La primera línea es para configurar los valores del plugin y la segunda para invocarlo. Element id hace referencia al identificador del elemento al cual se añadirán los
-botones.
+La primera lÃ­nea es para configurar los valores del plugin y la segunda para invocarlo. Element id hace referencia al
+identificador del elemento al cual se aÃ±adirÃ¡n los botones.
 
-¿CUALES SON LOS VALORES DE CONFIGURACION DEL PLUGIN?
+Â¿CUALES SON LOS VALORES DE CONFIGURACION DEL PLUGIN?
 ----------------------------------------------------
 
 Los valores son los siguientes:
 
-@aligment: 'String' (Indica la alineación de los elementos hijos)
+@aligment: 'String' (Indica la alineaciÃ³n de los elementos hijos)
 
 		left (por defecto) para alinear a la izquierda
 		right para alinear a la derecha
@@ -48,23 +58,23 @@ Los valores son los siguientes:
 		twitter para twitter
 		linkedin para linkedin
 
-@effect:'String' (Indica el tipo de efecto que se aplicará a los hijos)
+@effect:'String' (Indica el tipo de efecto que se aplicarÃ¡ a los hijos)
 
 		opacity: Opacidad
-		reverse: Intercambia los colores de fondo y texto entre sí
-		rotate (por defecto): Rotación
+		reverse: Intercambia los colores de fondo y texto entre sÃ­
+		rotate (por defecto): RotaciÃ³n
 
-@fixed: 'String' (Indica la posición respecto contenedor del padre cuando este está fijo)
+@fixed: 'String' (Indica la posiciÃ³n respecto contenedor del padre cuando este estÃ¡ fijo)
 
-		none (por defecto): La posición no es fija
-		yes: La posición es Fija
+		none (por defecto): La posiciÃ³n no es fija
+		yes: La posiciÃ³n es Fija
 
 @look: 'String' (Indica la apariencia de los hijos). Sus valores son:
 
-		circle: El borde del elemento es un círculo
+		circle: El borde del elemento es un cÃ­rculo
 		square (default): El borde del elemento es un cuadrado
 
-@position:'String' (Indica la posición de los hijos en su padre). Sus valores son:
+@position:'String' (Indica la posiciÃ³n de los hijos en su padre). Sus valores son:
 
 		column para mostrar los elementos en columna respecto al padre
 		row (default) para mostrar los elementos en fila respecto al padre
