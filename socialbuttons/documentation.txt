@@ -1,0 +1,71 @@
+WHAT IS THIS?
+-------------
+
+This is a jQuery plugin that allow add at your web pages or blog social buttons for share your content.
+In this first version you can add the next social buttons: google plus, facebook, twitter and linkendin. In future version
+you'll have available other buttons.
+
+HOW INVOKE THIS PLUGIN?
+-----------------------
+
+To begin with  you must add in your site web the next reference:
+
+1) jQuery: It's mandatory in order that the plugin start.
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+
+2) font-awesome: It's not mandatory inasmuch as the plugin adds this reference in your html code automaticly.
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+Once this is done, for invoke this plugin, you must add the next code between label <script></script> or in an external js file in your web page or blog.
+Always after the label <script> indicated in the first point to invoke to jquery:
+
+
+$(document).ready(function(){
+   $(element id).socialbuttons({'aligment':'left','buttons':["g-plus","facebook","twitter","linkedin"],'effect':'rotate','fixed':'none','look':'square','position':'row',});
+   $(element id).data('socialbuttons').start();
+});
+
+The first line configures the plugin and the second line call the plugin. Element id refers to the element id where will be added the buttons.
+
+
+WHICH ARE THE VALUES FOR CONFIGURATION OF THE PLUGIN?
+-----------------------------------------------------
+
+The values are:
+
+@aligment: 'String' (Indicates the aligment to elements childs)
+
+		left to left aligment
+		right to right aligment
+		center to center aligment
+
+@buttons: Array of String (Indicates the buttons to show). Its values are:
+
+		g-plus to google plus
+		facebook to facebook
+		twitter to twitter
+		linkedin to linkedin
+
+@effect:'String' (Indicates the type of effect for apply at the childs)
+
+		opacity: opacity effect
+		reverse: changes the property background-color value by the property color value and vice versa
+		rotate (default): rotation effect
+
+@fixed: 'String' (Indicates that position respect to their father is fixed)
+
+		none: (default) the position is not fixed
+		yes: the position is fixed
+
+@look: 'String' (Indicates the look to elements childs). Its values are:
+
+		circle: the border element is a circle
+		square (default): the border element is a square
+
+@position:'String' (Indicates the position to elements childs). Its values are:
+
+		column to align the elements in a column respect of its father
+		row (default) to align the elements in a row in respect of its father
