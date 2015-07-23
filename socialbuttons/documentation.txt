@@ -18,17 +18,17 @@ To begin with  you must add in your site web the next reference:
 
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-
-Once this is done, for invoke this plugin, you must add the next code between label <script></script> or in an external js file in your web page or blog.
-Always after the label <script> indicated in the first point to invoke to jquery:
-
+Once this is done, to invoke the plugin, you must add the following code between the <script> </ script> or an external js file on your website or blog just
+after <script src = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type = "text / javascript"> </ script> for the plugin to work :
 
 $(document).ready(function(){
+   <!-- line 1 -->
    $(element id).socialbuttons({'aligment':'left','buttons':["g-plus","facebook","twitter","linkedin"],'effect':'rotate','fixed':'none','look':'square','position':'row',});
+   <!-- line 2 -->
    $(element id).data('socialbuttons').start();
 });
 
-The first line configures the plugin and the second line call the plugin. Element id refers to the element id where will be added the buttons.
+The first line is to configure the plugin and the second line call the plugin. Element id refers to the element id where will be added the buttons.
 
 
 WHICH ARE THE VALUES FOR CONFIGURATION OF THE PLUGIN?
@@ -38,7 +38,7 @@ The values are:
 
 @aligment: 'String' (Indicates the aligment to elements childs)
 
-		left to left aligment
+		left (default) to left aligment
 		right to right aligment
 		center to center aligment
 
@@ -51,21 +51,21 @@ The values are:
 
 @effect:'String' (Indicates the type of effect for apply at the childs)
 
-		opacity: opacity effect
-		reverse: changes the property background-color value by the property color value and vice versa
-		rotate (default): rotation effect
+		opacity: Opacity effect
+		reverse: Changes the property background-color value by the property color value and vice versa
+		rotate (default): Rotation effect
 
-@fixed: 'String' (Indicates that position respect to their father is fixed)
+@fixed: 'String' (Indicates the relative position of the parent container when this is fixed)
 
-		none: (default) the position is not fixed
-		yes: the position is fixed
+		none: (default) The position is not fixed
+		yes: The position is fixed
 
 @look: 'String' (Indicates the look to elements childs). Its values are:
 
-		circle: the border element is a circle
-		square (default): the border element is a square
+		circle: The border element is a circle
+		square (default): The border element is a square
 
-@position:'String' (Indicates the position to elements childs). Its values are:
+@position:'String' (Indicates the position of the children in his father). Its values are:
 
-		column to align the elements in a column respect of its father
-		row (default) to align the elements in a row in respect of its father
+		column to show the elements in a column respect of its father
+		row (default) to show the elements in a row in respect of its father
