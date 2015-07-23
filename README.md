@@ -5,5 +5,5 @@ jquery.socialbuttons
 --------------------
 Allow add social buttons(G+, twitter,  etc)  to web pages, blog, etc./Permite añadir botones sociales(G+, Twitter, etc) a las páginas web, blogs, etc.
 
-There is documentation in the socialbuttons folder for find out more./Hay documentación en la carperta socialbuttons para saber
+There is documentation in the socialbuttons folder for find out more./Hay documentación en la carpeta socialbuttons para saber
 más.
